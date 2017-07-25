@@ -1,8 +1,18 @@
 package hibernate;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "stock", catalog = "learningDb")
 public class Stock {
+    @Id
+    @Column(name = "STOCK_ID")
     int stockId;
+
+    @Column(name = "STOCK_CODE")
     String stockCode;
+
+    @Column(name = "STOCK_NAME")
     String stockName;
 
     public Stock() {
